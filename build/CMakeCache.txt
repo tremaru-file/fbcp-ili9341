@@ -30,7 +30,7 @@ ARMV7A:BOOL=OFF
 ARMV8A:BOOL=ON
 
 //If true, enables fbcp-ili9341 to take control of backlight
-BACKLIGHT_CONTROL:BOOL=OFF
+BACKLIGHT_CONTROL:BOOL=ON
 
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
@@ -45,68 +45,54 @@ CMAKE_COLOR_MAKEFILE:BOOL=ON
 //CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
-//A wrapper around 'ar' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-8
-
-//A wrapper around 'ranlib' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-8
-
-//Flags used by the CXX compiler during all build types.
+//Flags used by the compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
 
-//Flags used by the CXX compiler during DEBUG builds.
+//Flags used by the compiler during debug builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
 
-//Flags used by the CXX compiler during MINSIZEREL builds.
+//Flags used by the compiler during release builds for minimum
+// size.
 CMAKE_CXX_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
 
-//Flags used by the CXX compiler during RELEASE builds.
+//Flags used by the compiler during release builds.
 CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
-//Flags used by the CXX compiler during RELWITHDEBINFO builds.
+//Flags used by the compiler during release builds with debug info.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
 CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
 
-//A wrapper around 'ar' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-8
-
-//A wrapper around 'ranlib' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-8
-
-//Flags used by the C compiler during all build types.
+//Flags used by the compiler during all build types.
 CMAKE_C_FLAGS:STRING=
 
-//Flags used by the C compiler during DEBUG builds.
+//Flags used by the compiler during debug builds.
 CMAKE_C_FLAGS_DEBUG:STRING=-g
 
-//Flags used by the C compiler during MINSIZEREL builds.
+//Flags used by the compiler during release builds for minimum
+// size.
 CMAKE_C_FLAGS_MINSIZEREL:STRING=-Os -DNDEBUG
 
-//Flags used by the C compiler during RELEASE builds.
+//Flags used by the compiler during release builds.
 CMAKE_C_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 
-//Flags used by the C compiler during RELWITHDEBINFO builds.
+//Flags used by the compiler during release builds with debug info.
 CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//Flags used by the linker during all build types.
+//Flags used by the linker.
 CMAKE_EXE_LINKER_FLAGS:STRING=
 
-//Flags used by the linker during DEBUG builds.
+//Flags used by the linker during debug builds.
 CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=
 
-//Flags used by the linker during MINSIZEREL builds.
+//Flags used by the linker during release minsize builds.
 CMAKE_EXE_LINKER_FLAGS_MINSIZEREL:STRING=
 
-//Flags used by the linker during RELEASE builds.
+//Flags used by the linker during release builds.
 CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 
-//Flags used by the linker during RELWITHDEBINFO builds.
+//Flags used by the linker during Release with Debug Info builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Enable/Disable output of compile commands during generation.
@@ -121,24 +107,19 @@ CMAKE_LINKER:FILEPATH=/usr/bin/ld
 //Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
 
-//Flags used by the linker during the creation of modules during
-// all build types.
+//Flags used by the linker during the creation of modules.
 CMAKE_MODULE_LINKER_FLAGS:STRING=
 
-//Flags used by the linker during the creation of modules during
-// DEBUG builds.
+//Flags used by the linker during debug builds.
 CMAKE_MODULE_LINKER_FLAGS_DEBUG:STRING=
 
-//Flags used by the linker during the creation of modules during
-// MINSIZEREL builds.
+//Flags used by the linker during release minsize builds.
 CMAKE_MODULE_LINKER_FLAGS_MINSIZEREL:STRING=
 
-//Flags used by the linker during the creation of modules during
-// RELEASE builds.
+//Flags used by the linker during release builds.
 CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 
-//Flags used by the linker during the creation of modules during
-// RELWITHDEBINFO builds.
+//Flags used by the linker during Release with Debug Info builds.
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
@@ -151,35 +132,24 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_DESCRIPTION:STATIC=
-
-//Value Computed by CMake
-CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
-
-//Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=Project
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
 
-//Flags used by the linker during the creation of shared libraries
-// during all build types.
+//Flags used by the linker during the creation of dll's.
 CMAKE_SHARED_LINKER_FLAGS:STRING=
 
-//Flags used by the linker during the creation of shared libraries
-// during DEBUG builds.
+//Flags used by the linker during debug builds.
 CMAKE_SHARED_LINKER_FLAGS_DEBUG:STRING=
 
-//Flags used by the linker during the creation of shared libraries
-// during MINSIZEREL builds.
+//Flags used by the linker during release minsize builds.
 CMAKE_SHARED_LINKER_FLAGS_MINSIZEREL:STRING=
 
-//Flags used by the linker during the creation of shared libraries
-// during RELEASE builds.
+//Flags used by the linker during release builds.
 CMAKE_SHARED_LINKER_FLAGS_RELEASE:STRING=
 
-//Flags used by the linker during the creation of shared libraries
-// during RELWITHDEBINFO builds.
+//Flags used by the linker during Release with Debug Info builds.
 CMAKE_SHARED_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //If set, runtime paths are not added when installing shared libraries,
@@ -189,24 +159,19 @@ CMAKE_SKIP_INSTALL_RPATH:BOOL=NO
 //If set, runtime paths are not added when using shared libraries.
 CMAKE_SKIP_RPATH:BOOL=NO
 
-//Flags used by the linker during the creation of static libraries
-// during all build types.
+//Flags used by the linker during the creation of static libraries.
 CMAKE_STATIC_LINKER_FLAGS:STRING=
 
-//Flags used by the linker during the creation of static libraries
-// during DEBUG builds.
+//Flags used by the linker during debug builds.
 CMAKE_STATIC_LINKER_FLAGS_DEBUG:STRING=
 
-//Flags used by the linker during the creation of static libraries
-// during MINSIZEREL builds.
+//Flags used by the linker during release minsize builds.
 CMAKE_STATIC_LINKER_FLAGS_MINSIZEREL:STRING=
 
-//Flags used by the linker during the creation of static libraries
-// during RELEASE builds.
+//Flags used by the linker during release builds.
 CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 
-//Flags used by the linker during the creation of static libraries
-// during RELWITHDEBINFO builds.
+//Flags used by the linker during Release with Debug Info builds.
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
@@ -290,7 +255,7 @@ SPI_BUS_CLOCK_DIVISOR:STRING=12
 
 //Set to 0, 1 or 2 to configure the level of statistics to display.
 // 0=OFF, 1=regular statistics, 2=frame rate interval histogram
-STATISTICS:STRING=1
+STATISTICS:STRING=0
 
 //Target Tontec's MZ61581-based 3.5 inch display
 TONTEC_MZ61581:BOOL=OFF
@@ -316,9 +281,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/pi/Github/fbcp-ili9341/build
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=13
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=7
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=4
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -329,10 +294,6 @@ CMAKE_CPACK_COMMAND:INTERNAL=/usr/bin/cpack
 CMAKE_CTEST_COMMAND:INTERNAL=/usr/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
 CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_COMPILER_AR
-CMAKE_CXX_COMPILER_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_CXX_COMPILER_RANLIB
-CMAKE_CXX_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS
 CMAKE_CXX_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_DEBUG
@@ -345,10 +306,6 @@ CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER_AR
-CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
-CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
@@ -377,8 +334,6 @@ CMAKE_EXPORT_COMPILE_COMMANDS-ADVANCED:INTERNAL=1
 CMAKE_EXTRA_GENERATOR:INTERNAL=
 //Name of generator.
 CMAKE_GENERATOR:INTERNAL=Unix Makefiles
-//Generator instance identifier.
-CMAKE_GENERATOR_INSTANCE:INTERNAL=
 //Name of generator platform.
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
@@ -410,12 +365,10 @@ CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
 CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
-//Platform information initialized
-CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.13
+CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.7
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
