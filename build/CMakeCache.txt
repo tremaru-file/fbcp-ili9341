@@ -30,7 +30,7 @@ ARMV7A:BOOL=OFF
 ARMV8A:BOOL=ON
 
 //If true, enables fbcp-ili9341 to take control of backlight
-BACKLIGHT_CONTROL:BOOL=ON
+BACKLIGHT_CONTROL:BOOL=OFF
 
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
@@ -248,7 +248,7 @@ FREEPLAYTECH_WAVESHARE32B:BOOL=OFF
 
 //Explicitly specify the Backlight GPIO pin (leave out if there
 // is no controllable Backlight line)
-GPIO_TFT_BACKLIGHT:STRING=13
+GPIO_TFT_BACKLIGHT:STRING=13 -DBACKLIGHT_CONTROL=ON
 
 //Explicitly specify the Data/Control GPIO pin (sometimes also
 // called Register Select)
